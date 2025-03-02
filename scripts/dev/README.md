@@ -35,6 +35,31 @@ An enhanced version of `project_tracking.sh` that additionally:
 - `/opt/sentigee/scripts/dev/output/project_tracking/` - Contains all output files
 - `/tmp/sentigee-194-repo/` - Temporary Git repository with the project files
 
+## prepare_github_push.sh
+
+A simpler alternative to `project_tracking_gitpush.sh` that creates an export package suitable for GitHub upload through multiple methods. This is useful when direct Git operations might not work due to authentication issues.
+
+### Usage
+
+```bash
+# Run the script to create an export package
+/opt/sentigee/scripts/dev/prepare_github_push.sh
+
+# Follow the instructions in the output to complete the upload
+```
+
+### Output
+
+- `/tmp/sentigee-github-export/` - Contains the export package with README and instructions
+- `/tmp/sentigee-github-export/UPLOAD_INSTRUCTIONS.md` - Detailed upload instructions for different methods
+
+### Features
+
+- Creates a clean export with key project files
+- Provides multiple options for uploading (web UI, command line, GitHub Desktop)
+- Includes the latest project tracking archive
+- No authentication required on the server side
+
 ### Requirements
 
 The script requires the following tools:
